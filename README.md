@@ -1,50 +1,58 @@
 # maven-simple-code-java
 
-===========================
+
 Maven Setup in Linux
-===========================
+
 
 # check maven software availability
+```bash
 $ mvn -version
-
+```
 # install maven s/w
+```bash
 $ sudo apt-get install maven
+```
 
-===========================
 Java Setup in Linux
-===========================
+
 
 # check java software availability
+```bash
 $ java -version
-
+```
 # install maven s/w
+```bash
 $ sudo apt install openjdk-17-jdk -y
-
+```
 =========================
 Creating Maven Project
 =========================
-
+```bash
   $ cd /home
+```
 => Execute below command in cmd to create maven stand-alone application (.jar file create)
-
+```bash
 mvn archetype:generate -DgroupId=in.ashokit -DartifactId=my-app-1 -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.5 -DinteractiveMode=false
-
+```
 => Execute below command to create maven web application (.war file create)
-
+```bash
 mvn archetype:generate -DgroupId=in.ashokit -DartifactId=my-web-app -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4 -DinteractiveMode=false
-
+```
 => Navigate into project directory and execute maven goals
-    $ cd /home/my-app-1
-    
-		$ mvn package -DskipTests=true
+```bash
+$ cd /home/my-app-1
+```
+```bash    
+$ mvn package -DskipTests=true
+```
 
-===================
 Maven Dependencies
-===================
+
 
 add pom.xml
+```bash
 $ vim my-app-1/pom.xml
-
+```
 -----------------------------------------------------------------
 <?xml version="1.0" encoding="UTF-8"?>
 
@@ -114,8 +122,9 @@ $ vim my-app-1/pom.xml
 </project>
 
 ----------------------------------------------------------------
-
+```bash
 $ vim /home/my-app-1/src/main/java/in/ashokit/App.java
+```
 -----------------------------------------------------
 package in.ashokit;
 
@@ -146,8 +155,8 @@ public class App {
     }
 }
 ----------------------------------------------------
-
+```bash
 $  mvn clean package
 $  java -jar target/my-app-1-1.0-SNAPSHOT.jar
-
-go on browser open ip:8080
+```
+go on browser open "ip:8080"
