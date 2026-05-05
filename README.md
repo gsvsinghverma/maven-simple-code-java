@@ -24,9 +24,9 @@ $ java -version
 ```bash
 $ sudo apt install openjdk-17-jdk -y
 ```
-=========================
+
 Creating Maven Project
-=========================
+
 ```bash
   $ cd /home
 ```
@@ -159,4 +159,7 @@ public class App {
 $  mvn clean package
 $  java -jar target/my-app-1-1.0-SNAPSHOT.jar
 ```
-go on browser open "ip:8080"
+go on browser open 
+```bash
+"ip:8080"
+```
